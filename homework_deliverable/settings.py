@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'homework_deliverable.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hw-deliverable',
+        'NAME': "homework",
     }
 }
 

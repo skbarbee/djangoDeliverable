@@ -13,6 +13,7 @@ from .serializers import StoreSerializer
 
 class StoresView(APIView):
 	"""View class for stores/ for viewing and creating"""
+	serializer_class = StoreSerializer
 	def get(self, request):
 		stores = Store.objects.all()
 		serializer = StoreSerializer(stores, many = True)
@@ -27,6 +28,7 @@ class StoresView(APIView):
 
 class StoreDetailView(APIView):
 	"""	View class for stores/:pk for viewing a single Store, updating a single Store, or removing a single Store"""
+	serializer_class = StoreSerializer
 	def get(self, request, pk):
 		store = get_object_or_404(Store, pk=pk)
 		serializer = StoreSerializer(store)
